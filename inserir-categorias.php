@@ -1,5 +1,5 @@
 <div class="container">
-<h2 class="bi bi-bookmark-plus"><i class="bi bi-plus"></i> Inserir Categoria</h2>
+<h2 class="bi bi-bookmark-plus"> Inserir Categoria</h2>
 <?php
 $nomeCategoria = $_POST["nomeCategoria"];
 
@@ -27,6 +27,6 @@ $sql = "INSERT INTO tbcategorias (
             <p>Erro ao inserir um novo registro.</p>
         </div>
         <?php
-    }
+    } 
 ?>
 </div>

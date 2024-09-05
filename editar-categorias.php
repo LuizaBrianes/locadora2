@@ -1,4 +1,4 @@
-<?php
+<?php 
 $idCategoria = $_GET["idCategoria"];
 $sql = "SELECT * FROM tbCategorias WHERE idCategoria = '{$idCategoria}'";
 $rs = mysqli_query($conexao, $sql) or die("Erro ao realizar a consulta. Erro: " . mysqli_error($conexao));
@@ -29,7 +29,7 @@ $dados = mysqli_fetch_assoc($rs);
     </div>
   
     <div class="mb-3">
-         <input class="btn btn-success bi bi-floppy-fill" type="submit" value="Salvar">   
+         <button class="btn btn-success bi bi-floppy-fill" type="submit"> Salvar</button>   
     </div>
 </form>
 </div>

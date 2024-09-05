@@ -1,5 +1,5 @@
 <div class="container">
-<h2 class="bi bi-bookmark-plus"><i class="bi bi-plus"></i> Cadastro de categorias</h2>
+<h2 class="bi bi-bookmark-plus">Cadastro de categorias</h2>
 
 <form action="index.php?menu=inserir-categorias" method="post">
     <div class="mb-3 col-6">
@@ -13,7 +13,7 @@
     </div>
   
     <div class="mb-3">
-         <input class="btn btn-success bi bi-floppy-fill" type="submit" value="Salvar">   
+         <button class="btn btn-success bi bi-floppy-fill" type="submit"> Salvar</button>   
     </div>
 </form>
-</div>
+</div> 

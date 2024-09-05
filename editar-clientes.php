@@ -5,29 +5,51 @@ $rs = mysqli_query($conexao, $sql) or die("Erro ao realizar a consulta. Erro: " 
 $dados = mysqli_fetch_assoc($rs);
 ?>
 
+<div class="container">
 <h2>Editar Cliente</h2>
 
 <form action="index.php?menu=atualizar-clientes" method="post">
-    <div>
-        <label for="idCliente">ID</label>
-        <input type="text" name="idCliente" id="idCliente" value="<?=$dados["idCliente"]?>" readonly>
+    <div class="mb-3 col-12 col-sm-2">
+        <label class="form-label" for="idCliente">ID</label>
+        <div class="input-group">
+            <div class="input-group-text">
+            <i class="bi bi-key"></i>
+            </div>
+        <input class="form-control" type="text" name="idCliente" id="idCliente" value="<?=$dados["idCliente"]?>" readonly>
+        </div>
     </div>
-    <div>
-        <label for="nomeCliente">Nome do Cliente</label>
-        <input type="text" name="nomeCliente" id="nomeCliente" value="<?=$dados["nomeCliente"]?>">
+    <div class="mb-3 col-12 col-sm-2">
+        <label class="form-label" for="nomeCliente">Nome do Cliente</label>
+        <div class="input-group">
+            <div class="input-group-text">
+            <i class="bi bi-person"></i>
+            </div>
+        <input class="form-control" type="text" name="nomeCliente" id="nomeCliente" value="<?=$dados["nomeCliente"]?>">
+        </div>
+    </div>
+
+    <div class="mb-3 col-12 col-sm-2">
+        <label class="form-label" for="telefoneCliente">Telefone</label>
+        <div class="input-group">
+            <div class="input-group-text">
+            <i class="bi bi-telephone"></i>
+            </div>
+        <input class="form-control" type="text" name="telefoneCliente" id="telefoneCliente" value="<?=$dados["telefoneCliente"]?>">
+        </div>
     </div>
   
-    <div>
-        <label for="telefoneCliente">Telefone</label>
-        <input type="text" name="telefoneCliente" id="telefoneCliente" value="<?=$dados["telefoneCliente"]?>">
+    <div class="mb-3 col-12 col-sm-2">
+        <label class="form-label" for="emailCliente">E-Mail</label>
+        <div class="input-group">
+            <div class="input-group-text">
+            <i class="bi bi-envelope"></i>
+            </div>
+        <input class="form-control" type="email" name="emailCliente" id="emailCliente" value="<?=$dados["emailCliente"]?>">
+        </div>
     </div>
   
-    <div>
-        <label for="emailCliente">E-Mail</label>
-        <input type="email" name="emailCliente" id="emailCliente" value="<?=$dados["emailCliente"]?>">
-    </div>
-  
-    <div>
-         <input type="submit" value="Salvar">   
+    <div class="mb-3">
+         <button class="btn btn-success bi bi-floppy-fill" type="submit"> Salvar</button>   
     </div>
 </form>
+</div>

@@ -1,4 +1,5 @@
-<h2>Inserir Cliente</h2>
+<div class="container">
+<h2 class="bi bi-people"> Inserir Cliente</h2>
 <?php
 $nomeCliente = $_POST["nomeCliente"];
 $telefoneCliente = $_POST["telefoneCliente"];
@@ -19,8 +20,19 @@ $sql = "INSERT INTO tbClientes (
     $rs = mysqli_query($conexao,$sql);
 
     if($rs){
-        echo "<p>Registro inserido com sucesso</p>";
+        ?>
+        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Adicionando novo registro</h4>
+            <p>Registro inserido com sucesso!</p>
+            <p>Clique <a href="index.php?menu=clientes" class="alert-link">aqui</a> para a lista de clientes.</p>
+        </div>
+        <?php
     }else{
-        echo "<p>Erro ao inserir</p>";
+        ?>
+        <div class="alert alert-danger" role="alert">
+            <p>Erro ao inserir um novo registro.</p>
+        </div>
+        <?php
     }
 ?>
+</div>

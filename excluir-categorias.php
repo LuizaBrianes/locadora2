@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"> 
     <h2>Excluir Categoria</h2>
 
     <?php
@@ -23,12 +23,8 @@
                     class="btn btn-danger m-4">Sim</a>
                 <a href="index.php?menu=excluir-categorias&idCategoria=<?= $idCategoria ?>&resposta=nao"
                     class="btn btn-secondary m-4">Não</a>
-
             </div>
             <?php
     }
-
-
     ?>
-
     </div>
